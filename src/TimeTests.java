@@ -15,9 +15,9 @@ public class TimeTests {
     private static File mainFold;
     private HashSet<String> operations;
 
-    private static final int countOfTests = 10;
+    private static final int countOfTests = 20;
     private static final int range = 1000;
-    private static final int countOfDataSets = 10;
+    private static final int countOfDataSets = 100;
     private static final int dataSetSize = (int) 1e6;
 
 
@@ -82,11 +82,7 @@ public class TimeTests {
             }
 
             for (int j = 0; j < countOfTests; j++) {
-                PriorityQueue qu = new PriorityQueue(dataSetSize + 5);
-                qu.add(100);
-                qu.add(100);
-
-//                qu.poll();
+                PriorityQueue qu = new PriorityQueue(dataSetSize);
 
                 for (int k = 0; k < dataSetSize / range; k++) {
                     long t1 = System.currentTimeMillis();
